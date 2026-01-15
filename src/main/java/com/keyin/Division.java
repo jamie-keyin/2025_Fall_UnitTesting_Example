@@ -1,6 +1,7 @@
 package com.keyin;
 
 import java.util.Calendar;
+import java.util.Objects;
 
 public class Division {
     private long id;
@@ -19,6 +20,18 @@ public class Division {
         }
 
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Division division = (Division) o;
+        return Objects.equals(name, division.name) && Objects.equals(startBirthYear, division.startBirthYear) && Objects.equals(endBirthYear, division.endBirthYear);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, startBirthYear, endBirthYear);
     }
 
     public long getId() {
