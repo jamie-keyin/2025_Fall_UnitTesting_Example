@@ -15,7 +15,7 @@ public class DivisionTest {
         divisionUnderTest.setId(1);
         divisionUnderTest.setName("U15 - Test");
         divisionUnderTest.setStartBirthYear("2011");
-        divisionUnderTest.setEndBirthYear("2012");
+        divisionUnderTest.setEndBirthYear("2013");
 
         Player u15Player = new Player();
         u15Player.setId(1);
